@@ -1,0 +1,23 @@
+{
+  "name": "discord-mass-moderation-bot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sicherer Discord-Moderationsbot mit /mass-Unterbefehlen",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "deploy": "node src/deploy-commands.js",
+    "check": "node --check src/index.js && node --check src/deploy-commands.js && node --check src/commands/mass.js && node --test"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "dependencies": {
+    "discord.js": "^14.27.0",
+    "dotenv": "^17.2.2"
+  },
+  "devDependencies": {
+    "pm2": "^6.0.8"
+  }
+}
